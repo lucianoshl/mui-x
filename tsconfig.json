@@ -1,30 +1,8 @@
 {
-  "extends": "@mui/monorepo/tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    // Already tested with eslint
-    "noUnusedLocals": false,
-    // TODO, turn to true
-    "noImplicitAny": false,
-    "baseUrl": "./",
-    "allowJs": true,
-    "paths": {
-      "@mui/x-data-grid": ["./packages/grid/x-data-grid/src"],
-      "@mui/x-data-grid/*": ["./packages/grid/x-data-grid/src/*"],
-      "@mui/x-data-grid-generator": ["./packages/grid/x-data-grid-generator/src/"],
-      "@mui/x-data-grid-generator/*": ["./packages/grid/x-data-grid-generator/src/*"],
-      "@mui/x-data-grid-pro": ["./packages/grid/x-data-grid-pro/src"],
-      "@mui/x-data-grid-pro/*": ["./packages/grid/x-data-grid-pro/src/*"],
-      "@mui/x-data-grid-premium": ["./packages/grid/x-data-grid-premium/src"],
-      "@mui/x-data-grid-premium/*": ["./packages/grid/x-data-grid-premium/src/*"],
-      "@mui/x-date-pickers": ["./packages/x-date-pickers/src"],
-      "@mui/x-date-pickers/*": ["./packages/x-date-pickers/src/*"],
-      "@mui/x-date-pickers-pro": ["./packages/x-date-pickers-pro/src"],
-      "@mui/x-date-pickers-pro/*": ["./packages/x-date-pickers-pro/src/*"],
-      "@mui/x-license-pro": ["./packages/x-license-pro/src"],
-      "@mui/x-license-pro/*": ["./packages/x-license-pro/src/*"],
-      "test/*": ["./test/*"]
-    }
+    "types": ["react", "mocha", "node"],
+    "noImplicitAny": true
   },
-  "exclude": ["**/node_modules/!(@mui)/**", "**/build/**/*", "docs/export/**/*"]
+  "include": ["src/**/*", "../../../node_modules/@mui/monorepo/test/utils/initMatchers.ts"]
 }

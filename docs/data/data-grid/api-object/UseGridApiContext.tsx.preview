@@ -1,7 +1,0 @@
-<DataGrid
-  {...data}
-  components={{
-    Toolbar: CustomToolbar,
-  }}
-  pageSize={10}
-/>
